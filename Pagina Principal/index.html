@@ -1,69 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Escuela PROA Córdoba</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container px-5">
-                <a class="navbar-brand" href="#!">ESCUELA PROA CAPITAL</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#!" onclick="mostrarDatosContacto()">Contact</a></li>
-                    </ul>
-                </div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Escuela PROA Córdoba</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* Agrega un estilo para centrar las imágenes y definir una altura fija */
+        .card-img {
+            display: block;
+            margin: 0 auto;
+            max-height: 200px; /* Ajusta la altura según tus necesidades */
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">ESCUELA PROA CAPITAL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#!" onclick="mostrarDatosContacto()">Contact</a></li>
+                </ul>
             </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container px-4 px-lg-5">
-            <!-- Heading Row-->
-            <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="../img/frente proa.jpg" alt="..." /></div>
-                <div class="col-lg-5">
-                    <h1 class="font-weight-light">La Historia de la Escuela PROA.</h1>
-                    <p>En esta pagina hablaremos de ¿Cómo se fundo PROA?, ¿Pára que se fundo?, támbien explicaremos ¿Cómo es PROA por dentro? y ¿Dónde sen encuentra?.</p>
-                </div>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container px-4 px-lg-5">
+        <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="../img/frente proa.jpg" alt="..." /></div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">La Historia de la Escuela PROA.</h1>
+                <p>En esta pagina hablaremos de ¿Cómo se fundo PROA?, ¿Pára que se fundo?, támbien explicaremos ¿Cómo es PROA por dentro? y ¿Dónde sen encuentra?.</p>
             </div>
-            <!-- Call to Action-->
-            <div class="card text-white bg-secondary my-5 py-4 text-center">
-                <div class="card-body"><p class="text-white m-0">Estas son tarjetas con información y imagenes de PROA</p></div>
-            </div>
-            <!-- Content Row-->
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">¿Qué es PROA?</h2>
-                            <img src="../img/proa.png" alt="Imagen de PROA" width="90%" height="85%" />
+        </div>
+        <!-- Call to Action-->
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body"><p class="text-white m-0">Estas son tarjetas con información y imagenes de PROA</p></div>
+        </div>
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5 row-cols-md-3">
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Qué es PROA?</h2>
+                        <!-- Agrega la clase 'card-img' para centrar la imagen -->
+                        <img src="../img/proa.png" alt="Imagen de PROA" class="img-fluid h-100 card-img" />
+                    </div>
+                    <div class="card-footer">
+                        <!-- Agrega un ID único al enlace para poder manipularlo con JavaScript -->
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#info-modal">ver mas</button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="info-modal" tabindex="-1" aria-labelledby="info-modal-label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="info-modal-label">ProA</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Contenido de la información adicional -->
+                                    <p>Las ProA son escuelas modelo en innovación educativa, que forman jóvenes especializados en Desarrollo de Software y en Biotecnología, saberes claves para el desarrollo productivo de nuestra región.</p>
+                                    <p>jornadas de 8 horas, las y los estudiantes participan en clubes de ciencias, arte, deportes, talleres de inglés aplicado y clases específicas vinculadas a la especialidad.</p>
+                                    <p>propuesta educativa también incluye tutorías que acercan herramientas personalizadas y acompañan los distintos ritmos de aprendizaje.</p>
+                                    <p>Además, se realizan todos los años Jornadas de Profundización sobre temáticas de relevancia social, donde chicas y chicos construyen un pensamiento crítico, creativo, colaborativo y responsable con su entorno.</p>
+                                    <p>Actualmente, funcionan más de 40 Escuelas ProA en toda la provincia y estamos construyendo 34 edificios propios de exclusivo diseño.</p>
+                                    <!-- El resto del contenido adicional -->
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">+info</a></div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">¿Cómo es PROA?</h2>
-                            <img src="../img/Proa patio.jpg" alt="Imagen de PROA" width="100%" height="85%" />
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="http://127.0.0.1:5501/index.html#">+info</a></div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Cómo es PROA?</h2>
+                        <!-- Agrega la clase 'card-img' para centrar la imagen -->
+                        <img src="../img/Proa patio.jpg" alt="Imagen de PROA" class="img-fluid h-100 card-img" />
                     </div>
-                </div>                  
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title">¿Dónde se encuentra?</h2>
-                            <img src="../img/capital cordoba.png" alt="Imagen de PROA" width="60%" height="70%" />
-                        </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">+info</a></div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="http://127.0.0.1:5501/index.html#">ver mas</a></div>
+                </div>
+            </div>                  
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Dónde se encuentra?</h2>
+                        <!-- Agrega la clase 'card-img' para centrar la imagen -->
+                        <img src="../img/capital cordoba.png" alt="Imagen de PROA" class="img-fluid h-100 card-img" />
                     </div>
+                    <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">ver mas</a></div>
                 </div>
             </div>
         </div>
