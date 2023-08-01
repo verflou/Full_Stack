@@ -5,15 +5,12 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #9f90ea;
+  background-color:#dceeb1;
 }
 
 .navbar{
-  background-color: #2d2c55;
+  background-color:#0f684b;
 }
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
